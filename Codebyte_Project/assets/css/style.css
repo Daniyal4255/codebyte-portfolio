@@ -1,0 +1,126 @@
+:root {
+    --bg-black: #050608;
+    --bg-soft: #0d0f15;
+    --cyan: #00d2ff;
+    --purple: #b24592; /* High contrast purple from logo */
+    --gradient: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+}
+
+body {
+    background-color: var(--bg-black);
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Typography Sync */
+.logo-text {
+    font-family: 'Michroma', sans-serif;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Navbar */
+.custom-nav { background: rgba(5, 6, 8, 0.9); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.nav-link { color: #888 !important; transition: 0.3s; }
+.nav-link:hover { color: var(--cyan) !important; }
+
+/* Responsive Card */
+.bg-dark-soft { background-color: var(--bg-soft); }
+.project-card {
+    background: #11141d;
+    border: 1px solid rgba(178, 69, 146, 0.2);
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.uk-logo-main {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(178, 69, 146, 0.2);
+}
+
+.logo-glow-wrapper { position: relative; display: inline-block; }
+.logo-glow-wrapper::after {
+    content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 120%; height: 120%; background: var(--purple); filter: blur(50px); opacity: 0.1; z-index: -1;
+}
+
+/* Skeleton Loaders */
+.content-hidden { display: none; opacity: 0; }
+.skeleton-title { width: 300px; height: 50px; border-radius: 10px; }
+.skeleton-card { width: 100%; height: 450px; border-radius: 30px; }
+
+.skeleton-text, .skeleton-card {
+    background: linear-gradient(90deg, #11141d 25%, #1d212b 50%, #11141d 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer { 100% { background-position: -200% 0; } }
+
+/* UI Elements */
+.btn-visit, .btn-send {
+    background: var(--gradient); color: white; border: none;
+    font-weight: bold; padding: 12px 35px; border-radius: 50px; transition: 0.3s;
+}
+
+.btn-send:hover, .btn-visit:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(0, 210, 255, 0.3); }
+
+.btn-gradient-small {
+    background: var(--gradient); color: white; text-decoration: none;
+    padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: bold;
+}
+
+.glass-form { background: #11141d; padding: 40px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.05); max-width: 700px; }
+.custom-input { width: 100%; background: #050608; border: 1px solid #222; color: white; padding: 15px; border-radius: 15px; }
+
+.footer-border { border-top: 1px solid rgba(255,255,255,0.05); }
+
+@media (max-width: 991px) {
+    .skeleton-card { height: 600px; }
+}
+
+/* Custom Modal Styling */
+.custom-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 6, 8, 0.9);
+    backdrop-filter: blur(10px);
+    display: none; /* Hidden by default */
+    align-items: center; justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.4s ease;
+    opacity: 0; /* Starts hidden for the JS fade-in */
+}
+
+.modal-glass-content {
+    background: #11141d;
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    padding: 50px;
+    border-radius: 40px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 50px rgba(178, 69, 146, 0.2);
+}
+
+.success-icon-wrapper {
+    width: 100px; height: 100px;
+    background: rgba(0, 210, 255, 0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto;
+}
+
+.text-cyan { stroke: var(--cyan); }

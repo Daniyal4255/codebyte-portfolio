@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codebyte | Digital Architecture</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top custom-nav">
+        <div class="container">
+            <a class="navbar-brand logo-text" href="#">CODEBYTE</a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-4 text-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Our Projects</a></li>
+                    <li class="nav-item mt-3 mt-lg-0">
+                        <a class="btn-gradient-small" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-bg d-flex align-items-center justify-content-center text-center">
+            <div class="container" data-aos="fade-up">
+                <h1 class="display-1 logo-text mb-3">CODEBYTE</h1>
+                <p class="fs-4 text-secondary">Crafting the future of web and mobile tech.</p>
+            </div>
+        </section>
+
+        <section id="about" class="py-5">
+            <div class="container text-center">
+                <div id="about-skeleton" class="skeleton-text skeleton-title mx-auto mb-4"></div>
+                
+                <div id="about-content" class="content-hidden" data-aos="fade-up">
+                    <h2 class="gradient-text display-4 mb-4">About Us</h2>
+                    <p class="lead text-secondary mx-auto" style="max-width: 850px;">
+                        Codebyte is a company aimed to make website making frontend backend, data handling, 
+                        chating applications, movie video applications and etc. 
+                        We specialize in high-performance digital ecosystems that scale.
+                        <br><br>
+                        It is officially founded by <strong class="text-white">Muhammad Daniyal Khurram</strong> from Pakistan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-5 bg-dark-soft">
+            <div class="container">
+                <h2 class="gradient-text mb-5 text-center text-lg-start">Our Projects</h2>
+                
+                <div class="project-card" data-aos="zoom-in">
+                    <div id="project-skeleton" class="skeleton-card"></div>
+                    
+                    <div id="project-content" class="content-hidden row align-items-center g-0">
+                        <div class="col-lg-4 p-5 text-center">
+                            <div class="logo-glow-wrapper">
+                                <img src="assets/img/uk_logo.jpg" class="uk-logo-main" alt="UK Films Logo">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 p-4 p-md-5 text-center text-lg-start">
+                            <h3 class="display-6 fw-bold mb-3">UK FILMS</h3>
+                            <p class="text-secondary fs-5">
+                                A premium video displaying website and mobile application. 
+                                We designed this to showcase cinematic content with seamless streaming capabilities and a high-end interface.
+                            </p>
+                            <a href="http://ukfilmindustry.netlify.app/" target="_blank" class="btn btn-visit mt-3">Visit Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="glass-form mx-auto" data-aos="fade-up">
+                    <h2 class="text-center mb-4 gradient-text">Get In Touch</h2>
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" name="name" class="custom-input" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" name="email" class="custom-input" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <textarea name="message" class="custom-input mb-4" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        <button type="submit" class="btn-send w-100">Send Project Details</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-5 footer-border">
+        <div class="container text-center">
+            <p class="mb-0 text-secondary">© 2026 <span class="logo-text" style="font-size: 0.9rem;">CODEBYTE</span> | Founder: Muhammad Daniyal Khurram</p>
+        </div>
+    </footer>
+
+    <div id="successModal" class="custom-modal">
+    <div class="modal-glass-content text-center" data-aos="zoom-in">
+        <div class="success-icon-wrapper mb-4">
+            <svg viewBox="0 0 24 24" width="60" height="60" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="text-cyan"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h2 class="gradient-text mb-3">Deployment Successful!</h2>
+        <p class="text-secondary mb-4">Your project details have been securely transmitted to the Codebyte Inbox.</p>
+        <button onclick="closeModal()" class="btn-send px-5">Continue</button>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
